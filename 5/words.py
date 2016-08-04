@@ -68,16 +68,9 @@ sum2=0
 for line in lines:
 	if(contains3Vowels(line) and containsDoubledChars(line) and doesntContainThese(line)):
 		sum=sum+1
-
-for line in lines:
 	if(isNice2(line)):
 		sum2=sum2+1
 
+
 print(str(sum) + " nice words.")
 print(str(sum2) + " nice words by 2nd algorithms.")
-
-print(isNice2("qjhvhtzxzqqjkmpb"))
-print(isNice2("xxyxx"))
-print(contains2PairsOfLetters("xxyxx"))
-print(isNice2("uurcxstgmygtbstg"))
-print(isNice2("ieodomkazucvgmuy"))
