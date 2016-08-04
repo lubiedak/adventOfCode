@@ -29,11 +29,55 @@ def doesntContainThese(word):
 			sum=sum+1
 	return sum==0
 
+def containsAAA(word):
+	wordSize = len(word)
+	for i in range(wordSize)[1:wordSize-1]:
+		if(word[i-1]==word[i+1] and word[i-1]==word[i]):
+			return True
+	return False
+	
+def contains2PairsOfLetters(word):
+	if(containsAAA(word)):
+		return False
+	wordSize = len(word[:-1])
+	pairs = set()
+	for i in range(wordSize):
+		pair = word[i]+word[i+1]
+		pairs.add(pair)
+
+	sizeOfSets = len(pairs)-1
+	print(str(wordSize) + " " + str(sizeOfSets) + " " + str(word))
+	return sizeOfSets < wordSize-1
+	
+def containsLetterBetweenPair(word):
+	wordSize = len(word)
+	for i in range(wordSize)[1:wordSize-1]:
+		if(word[i-1]==word[i+1]):
+			return True
+	return False
+
+
+	
+def isNice2(word):
+	return contains2PairsOfLetters(word) and containsLetterBetweenPair(word)
+
 lines = readLines()
 
 sum=0
+sum2=0
 for line in lines:
 	if(contains3Vowels(line) and containsDoubledChars(line) and doesntContainThese(line)):
 		sum=sum+1
 
-print(sum)
+for line in lines:
+	if(isNice2(line)):
+		sum2=sum2+1
+
+print(str(sum) + " nice words.")
+print(str(sum2) + " nice words by 2nd algorithms.")
+
+print(isNice2("qjhvhtzxzqqjkmpb"))
+print(isNice2("xxyxx"))
+print(contains2PairsOfLetters("xxyxx"))
+print(isNice2("uurcxstgmygtbstg"))
+print(isNice2("ieodomkazucvgmuy"))
