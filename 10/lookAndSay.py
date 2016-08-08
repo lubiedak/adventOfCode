@@ -14,5 +14,6 @@ def lookAndSay(word):
 word = "1113222113"
 for i in range(50):
 	word = lookAndSay(word)
+	print("I: " + str(i) + "Length: " + str(len(word)))
 
 print(len(word))
