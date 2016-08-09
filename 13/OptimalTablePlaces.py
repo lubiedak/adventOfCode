@@ -1,5 +1,3 @@
-#Alice would gain 2 happiness units by sitting next to Bob.
-
 from itertools import permutations
 
 def readLines():
