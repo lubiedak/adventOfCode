@@ -1,10 +1,3 @@
-# lx -> a
-# lw OR lv -> lx
-# lc LSHIFT 1 -> lw
-# 1 AND lu -> lv
-# lb OR la -> lc
-# lr AND lt -> lu
-
 class Wire:
 	name = ""
 	value = None
@@ -111,7 +104,7 @@ while(connections[0].hasValue()==False):
 			for con1 in connections:
 				if(con1.containsArg(connection.out.name)):
 					con1.setArg(connection.out)
-					print con1
+					#print con1
 		else:
 			connection.tryToCalculateOutValue()
 
