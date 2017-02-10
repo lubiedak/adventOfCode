@@ -2,10 +2,8 @@ from itertools import permutations
 #Faerun to Tristram = 65
 #Faerun to Tristram = 65
 def readLines():
-	data = ""	
 	with open('input.txt') as f:
-		data = f.readlines()
-	return data
+		return f.readlines()
 
 allCities = set()
 	
@@ -29,15 +27,15 @@ allCities.add("Arbre")
 allPerms = list(permutations(allCities))
 
 best = 0
-sum = 0
+sump = 0
 
 
 
 for perm in allPerms:
-	sum=0
+	sump=0
 	for i in range(len(perm)-1):
-		sum+=distances[perm[i]+perm[i+1]]
-	if(sum > best):
-		best = sum
+		sump+=distances[perm[i]+perm[i+1]]
+	if(sump > best):
+		best = sump
 		print best
 		print perm

@@ -8,10 +8,10 @@ def findOccurences(s, ch):
     return [i for i, letter in enumerate(s) if letter == ch]
 	
 def contains3Vowels(word):
-	sum=0
+	sumv=0
 	for c in "aeiou":
-		sum=sum+len(findOccurences(word,c))
-	return sum>2
+		sumv=sumv+len(findOccurences(word,c))
+	return sumv>2
 
 def containsDoubledChars(word):
 	oldC = word[0]
@@ -23,11 +23,11 @@ def containsDoubledChars(word):
 	return False
 
 def doesntContainThese(word):
-	sum=0
+	sumc=0
 	for c in ['ab', 'cd', 'pq', 'xy']:
 		if(c in word):
-			sum=sum+1
-	return sum==0
+			sumc=sumc+1
+	return sumc==0
 
 def containsAAA(word):
 	wordSize = len(word)
@@ -63,14 +63,14 @@ def isNice2(word):
 
 lines = readLines()
 
-sum=0
+sum1=0
 sum2=0
 for line in lines:
 	if(contains3Vowels(line) and containsDoubledChars(line) and doesntContainThese(line)):
-		sum=sum+1
+		sum1=sum1+1
 	if(isNice2(line)):
 		sum2=sum2+1
 
 
-print(str(sum) + " nice words.")
+print(str(sum1) + " nice words.")
 print(str(sum2) + " nice words by 2nd algorithms.")

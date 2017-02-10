@@ -46,11 +46,11 @@ for line in lines:
 			fun(a,c,b,d,command)
 			break
 
-sum = 0
+suml = 0
 for lightLine in lights:
 	for light in lightLine:
 		#print(light)
-		sum=sum+light
+		suml=suml+light
 		
-print(sum)
+print(suml)
 			

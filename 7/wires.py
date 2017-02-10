@@ -1,5 +1,5 @@
 class Wire:
-	name = ""
+	name = None
 	value = None
 	def __init__(self, name):
 		self.name = name
@@ -45,10 +45,8 @@ class WireConnection:
 		self.arg2 = wire if(wire.name==self.arg2.name) else self.arg2
 
 def readLines():
-	data = ""	
 	with open('input.txt') as f:
-		data = f.readlines()
-	return data
+		return f.readlines()
 
 
 def tryParseToInt(strVal):

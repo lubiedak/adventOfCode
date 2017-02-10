@@ -12,8 +12,8 @@ def sumsTo150(n):
 		return 1
 	return 0
 
-sum = 0
+sum1 = 0
 
 for i in range(1024*1024):
-	sum += sumsTo150(i)
-print(sum)
+	sum1 += sumsTo150(i)
+print(sum1)

@@ -1,12 +1,10 @@
 def readAll():
-	data = ""	
 	with open('input.txt') as f:
-		data = f.read()
-	return data
+		return f.read()
 
 data=readAll()
 
-sum = 0
+sumD = 0
 
 i = 0
 while( i < len(data)):
@@ -18,7 +16,7 @@ while( i < len(data)):
 			digits.append(data[i])
 			i+=1
 		strDigits = ''.join(digits)
-		sum+=coef*int(strDigits)
+		sumD+=coef*int(strDigits)
 	else:
 		i+=1
-print sum
+print sumD

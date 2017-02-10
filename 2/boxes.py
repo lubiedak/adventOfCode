@@ -20,7 +20,7 @@ def readLines():
 lines = readLines()
 sum = 0
 sumr = 0
-stri = ""
+stri = None
 for line in lines:
 	abc = line.split('x')
 	a = int(abc[0])
