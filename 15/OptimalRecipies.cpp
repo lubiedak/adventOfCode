@@ -22,6 +22,7 @@ public:
 		this->size = size;
 		this->range = range;
 		p = vector<int>(size, 1);
+		check = 0;
 	}
 
 	void next() {
@@ -73,21 +74,15 @@ private:
 
 int main()
 {
-
-
-	int bestProperty=1;
-	int property = 1;
-
-	int numbers = 4;
-	int size = 100;
-	Proportions p(4, 100);
+	Proportions p(numbers, 100);
 
 	int i = 0;
 	while (!p.isMax()) {
 		while (!p.sumsToRange()) {
 			p.next();
 		}
-		property = 1;
+		int property = 1;
+		int bestProperty=1;
 		for (int i = 0; i < numbers; ++i) {
 			int pi = sprinkles[i] * p.p[0] + butterScotch[i] * p.p[1] + chocolate[i] * p.p[2] + candy[i] * p.p[3];
 			if (pi > 0)

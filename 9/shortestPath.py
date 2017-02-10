@@ -6,7 +6,7 @@ def readLines():
 		return f.readlines()
 
 allCities = set()
-	
+
 def parseData(data):
 	distances = {}
 	for line in data:

@@ -1,12 +1,12 @@
 def readLines():
-	lines = []	
+	lines = []
 	with open('input.txt') as f:
 		lines = f.readlines()
 	return lines
 
 def findOccurences(s, ch):
     return [i for i, letter in enumerate(s) if letter == ch]
-	
+
 def contains3Vowels(word):
 	sumv=0
 	for c in "aeiou":

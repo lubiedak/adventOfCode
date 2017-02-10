@@ -5,7 +5,7 @@ def readLines():
 		return f.readlines()
 
 allNames = set()
-	
+
 def parseData(data):
 	sittingPreferences = {}
 	for line in data:

@@ -3,7 +3,7 @@ class Wire:
 	value = None
 	def __init__(self, name):
 		self.name = name
-	
+
 	def __repr__(self):
 		return self.name + "=" + str(self.value)
 
@@ -55,12 +55,12 @@ def tryParseToInt(strVal):
 		val = int(strVal)
 		return val
 	except ValueError:
-		return strVal	
+		return strVal
 
 
 def tryToGetValueForWire(strVal):
 	value = tryParseToInt(strVal)
-	if type(value) is int:
+	if isinstance(value) is int:
 		wire = Wire("X")
 		wire.value = value
 		return wire

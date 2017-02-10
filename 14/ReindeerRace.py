@@ -25,7 +25,6 @@ for r in reindeers:
 		r[distance] += r[speed]*fly
 		time-=fly
 		time-=r[breakTime]
-	
 	print(r)
 print(" ")
 for r in reindeers:

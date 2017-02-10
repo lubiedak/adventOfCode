@@ -7,7 +7,6 @@ string lookAndSay(string word) {
 	char oldC = word.charAt(0);
 	String newWord = "";
 	int i = 1;
-	std::string::iterator it=str.begin();
 	
 	for ( std::string::iterator it=str.begin(); it!=str.end(); ++it){
 		
