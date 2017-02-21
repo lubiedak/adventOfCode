@@ -1,12 +1,12 @@
 
 def paperNeededForABox(a,b,c):
-	list = [a,b,c]
-	lists = sorted(list)
+	dimensions = [a,b,c]
+	lists = sorted(dimensions)
 	return lists[0]*lists[1] + 2*(a*b + b*c + a*c)
 
 def ribbonNeeded(a,b,c):
-	list = [a,b,c]
-	lists = sorted(list)
+	dimensions = [a,b,c]
+	lists = sorted(dimensions)
 	return 2*(lists[0]+lists[1]) + a*b*c
 
 def readLines():
@@ -18,9 +18,9 @@ def readLines():
 
 ########### MAIN ###########
 lines = readLines()
-sum = 0
+sump = 0
 sumr = 0
-stri = ""
+stri = None
 for line in lines:
 	abc = line.split('x')
 	a = int(abc[0])
@@ -29,8 +29,8 @@ for line in lines:
 	paper = paperNeededForABox(a,b,c)
 	ribbon = ribbonNeeded(a,b,c)
 
-	sum = sum + paper
+	sump = sump + paper
 	sumr = sumr + ribbon
 
-print(sum)
+print(sump)
 print(sumr)

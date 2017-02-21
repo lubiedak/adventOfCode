@@ -13,10 +13,8 @@ def posToStr(pos):
 	return str(pos[0]) + " " + str(pos[1])
 
 def readLines():
-	data = ""	
 	with open('input.txt') as f:
-		data = f.read()
-	return data
+		return f.read()
 
 data = readLines()
 posS = [0,0]

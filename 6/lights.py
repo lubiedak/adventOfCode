@@ -5,7 +5,7 @@ size = 1000
 lights = [[0 for i in range(size)] for j in range(size)]
 
 def readLines():
-	lines = []	
+	lines = []
 	with open('input.txt') as f:
 		lines = f.readlines()
 	return lines
@@ -46,11 +46,12 @@ for line in lines:
 			fun(a,c,b,d,command)
 			break
 
-sum = 0
+suml = 0
 for lightLine in lights:
 	for light in lightLine:
 		#print(light)
-		sum=sum+light
-		
-print(sum)
+		suml=suml+light
+
+
+print(suml)
 			

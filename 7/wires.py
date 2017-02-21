@@ -1,9 +1,9 @@
 class Wire:
-	name = ""
+	name = None
 	value = None
 	def __init__(self, name):
 		self.name = name
-	
+
 	def __repr__(self):
 		return self.name + "=" + str(self.value)
 
@@ -45,10 +45,8 @@ class WireConnection:
 		self.arg2 = wire if(wire.name==self.arg2.name) else self.arg2
 
 def readLines():
-	data = ""	
 	with open('input.txt') as f:
-		data = f.readlines()
-	return data
+		return f.readlines()
 
 
 def tryParseToInt(strVal):
@@ -57,12 +55,12 @@ def tryParseToInt(strVal):
 		val = int(strVal)
 		return val
 	except ValueError:
-		return strVal	
+		return strVal
 
 
 def tryToGetValueForWire(strVal):
 	value = tryParseToInt(strVal)
-	if type(value) is int:
+	if isinstance(value) is int:
 		wire = Wire("X")
 		wire.value = value
 		return wire

@@ -7,8 +7,8 @@ i = 0
 while(True):
     base = "bgvyzdsv" + str(i)
     m = md5.new(base)
-    hash = m.hexdigest()
-    if(hash.find(startsWith) == 0):
+    generatedHash = m.hexdigest()
+    if(generatedHash.find(startsWith) == 0):
         print(i)
         break
     
